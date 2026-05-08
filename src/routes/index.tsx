@@ -4,11 +4,6 @@ import { Hero } from "@/components/site/Hero";
 import { Stats } from "@/components/site/Stats";
 import { About } from "@/components/site/About";
 import { Products } from "@/components/site/Products";
-import { WhyChooseUs } from "@/components/site/WhyChooseUs";
-import { Process } from "@/components/site/Process";
-import { Sustainability } from "@/components/site/Sustainability";
-import { Testimonials } from "@/components/site/Testimonials";
-import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -44,11 +39,6 @@ function Home() {
       <Stats />
       <About />
       <Products />
-      <WhyChooseUs />
-      <Process />
-      <Sustainability />
-      <Testimonials />
-      <CTA />
       <Footer />
     </main>
   );
