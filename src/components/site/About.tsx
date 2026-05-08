@@ -1,4 +1,5 @@
 import { ArrowRight, Sprout, Target } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import farmerImg from "@/assets/about-farmer.jpg";
 import factoryImg from "@/assets/about-factory.jpg";
 import { Reveal } from "./Reveal";
@@ -39,10 +40,11 @@ export function About() {
               <span className="italic text-primary">Trusted</span> worldwide.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              For over a decade, TEV Africa Foods has bridged the gap between Africa's most fertile
-              farmlands and global markets. We partner directly with smallholder farmers, operate
-              modern processing facilities, and deliver food products that meet the highest
-              international standards.
+              From our base in Malawi, TEV Africa Foods bridges the gap between Africa's most
+              fertile farmlands and global markets. We partner with smallholder farmers across
+              Dedza, Kasungu, and Mangochi, and operate modern processing and seed multiplication
+              facilities at Chankhandwe Farm — backed by research collaborations with IITA, CIAT,
+              and ICRISAT.
             </p>
 
             <div className="mt-8 rounded-2xl border border-border bg-card p-6 shadow-soft">
@@ -60,13 +62,13 @@ export function About() {
               </div>
             </div>
 
-            <a
-              href="#contact"
+            <Link
+              to="/about"
               className="group mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
             >
               Learn More About Us
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

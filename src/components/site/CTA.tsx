@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 
 export function CTA() {
@@ -34,12 +35,12 @@ export function CTA() {
                   Become a Partner
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
-                <a
-                  href="#products"
+                <Link
+                  to="/products"
                   className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-4 text-sm font-medium text-white backdrop-blur-md transition-colors hover:bg-white/20"
                 >
                   View Product Catalog
-                </a>
+                </Link>
               </div>
             </div>
           </div>

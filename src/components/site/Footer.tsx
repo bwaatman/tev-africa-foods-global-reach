@@ -1,18 +1,26 @@
 import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Twitter, ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 
-const cols = [
+const cols: { title: string; links: { label: string; to: "/" | "/about" | "/products" | "/services" | "/sustainability" | "/contact" }[] }[] = [
   {
     title: "Company",
-    links: ["About", "Sustainability", "Careers", "Press"],
+    links: [
+      { label: "About", to: "/about" },
+      { label: "Sustainability", to: "/sustainability" },
+      { label: "Services", to: "/services" },
+      { label: "Contact", to: "/contact" },
+    ],
   },
   {
     title: "Products",
-    links: ["Grains", "Cooking Oil", "Maize Meal", "Rice", "Flour"],
-  },
-  {
-    title: "Resources",
-    links: ["Catalog", "Certifications", "Quality", "FAQ"],
+    links: [
+      { label: "Cassava & Seed", to: "/products" },
+      { label: "Cooking Oil", to: "/products" },
+      { label: "Maize Meal", to: "/products" },
+      { label: "Groundnuts", to: "/products" },
+      { label: "Packaged Foods", to: "/products" },
+    ],
   },
 ];
 
@@ -50,8 +58,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo light />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
-              Sourcing, processing, and distributing premium African food products to the world,
-              with quality and sustainability at our core.
+              An integrated agribusiness sourcing, processing, and distributing premium African
+              food products from Malawi to the world.
             </p>
             <div className="mt-6 flex gap-3">
               {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
@@ -72,22 +80,22 @@ export function Footer() {
               <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">{c.title}</h4>
               <ul className="mt-5 space-y-3">
                 {c.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-sm text-white/80 transition-colors hover:text-accent">
-                      {l}
-                    </a>
+                  <li key={l.label}>
+                    <Link to={l.to} className="text-sm text-white/80 transition-colors hover:text-accent">
+                      {l.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-4">
             <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Contact</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/80">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                Lagos · Nairobi · Accra
+                Chankhandwe Farm · Lilongwe, Malawi
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
@@ -95,7 +103,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                +234 800 000 0000
+                +265 (0) 1 000 000
               </li>
             </ul>
           </div>

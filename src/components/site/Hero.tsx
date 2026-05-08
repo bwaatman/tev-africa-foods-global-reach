@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-farm.jpg";
 
 export function Hero() {
@@ -70,22 +71,22 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <a
-            href="#products"
+          <Link
+            to="/products"
             className="group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-sm font-medium text-charcoal shadow-warm transition-all hover:scale-[1.03] hover:shadow-2xl"
           >
             Explore Products
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="group inline-flex items-center gap-3 rounded-full border border-white/25 bg-white/10 px-6 py-4 text-sm font-medium text-white backdrop-blur-md transition-all hover:bg-white/20"
           >
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">
               <Play className="h-3 w-3 fill-white" />
             </span>
             Contact Us
-          </a>
+          </Link>
         </motion.div>
 
         {/* Inline trust strip */}
